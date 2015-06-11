@@ -1,9 +1,0 @@
-== 20150609021653 DeviseCreateAdminUsers: migrating ===========================
--- create_table(:admin_users)
-   -> 0.0122s
--- add_index(:admin_users, :email, {:unique=>true})
-   -> 0.0032s
--- add_index(:admin_users, :reset_password_token, {:unique=>true})
-   -> 0.0034s
-== 20150609021653 DeviseCreateAdminUsers: migrated (0.0189s) ==================
-
