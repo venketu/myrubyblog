@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'pages/about'
+
+  get 'pages/contact'
+
+  get 'pages/resources'
+
   get 'categories/index'
 
   get 'categories/edit'
@@ -10,6 +16,8 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -18,6 +26,9 @@ Rails.application.routes.draw do
 
   resources :posts
   resources :categories
+  match '/about', to: 'pages#about', via: :all
+  match '/resources', to: 'pages#resources', via: :all
+  match '/contact', to: 'pages#contact', via: :all
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
