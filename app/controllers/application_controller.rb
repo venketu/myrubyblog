@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
   end
 
   def site_search
-  	@search = Post.search(params[:q])
+  @search = Post.search(params[:q])
 	@search_posts = @search.result
   end
 end
